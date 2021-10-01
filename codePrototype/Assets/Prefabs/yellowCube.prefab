@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2108379346136407026}
   m_Layer: 0
   m_Name: yellowCube
-  m_TagString: Untagged
+  m_TagString: selectCubes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

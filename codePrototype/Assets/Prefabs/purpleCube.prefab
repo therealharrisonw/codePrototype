@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5533876324727948610}
   m_Layer: 0
   m_Name: purpleCube
-  m_TagString: Untagged
+  m_TagString: selectCubes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
