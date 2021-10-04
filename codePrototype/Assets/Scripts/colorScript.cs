@@ -9,7 +9,9 @@ public class colorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-     
+        rend = GetComponent<Renderer>();
+        int rand = Random.Range(0, materials.Length);
+        rend.material = materials[rand];
     }
 
     // Update is called once per frame
