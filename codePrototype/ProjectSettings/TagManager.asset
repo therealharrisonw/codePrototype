@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SpawnPoints
   - selectCubes
+  - randCubes
   layers:
   - Default
   - TransparentFX

@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class spawnManager : MonoBehaviour
 {
-    GameObject[] spawnPoints;
+    GameObject[] randomSpawnPoints; //sets up the array for my randomized spawn cubes. 
     [SerializeField]
-    GameObject prefabs;
+    GameObject randprefabs;
     // Start is called before the first frame update
     void Start()
     {
-        spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoints");
+       randomSpawnPoints = GameObject.FindGameObjectsWithTag("randomSpawn");
         
-        foreach (GameObject spawn in spawnPoints)
+        
+        foreach (GameObject spawn in randomSpawnPoints)
         {
-            GameObject spawnObj = Instantiate(prefabs, spawn.transform, false);
+            GameObject spawnObj = Instantiate(randprefabs, spawn.transform, false);
         }
     }
 

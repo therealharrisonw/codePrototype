@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5862534391296752061}
   m_Layer: 0
   m_Name: CubeSpawn
-  m_TagString: Untagged
+  m_TagString: randCubes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
