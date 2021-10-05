@@ -39,20 +39,6 @@ public class spawnManager : MonoBehaviour
         spawn7 = GameObject.FindGameObjectWithTag("spawn7");
         spawn8 = GameObject.FindGameObjectWithTag("spawn8");
 
-        // recommend using a for loop
-        foreach (GameObject spawn in randomSpawnPoints)
-        {
-            GameObject spawnObj = Instantiate(randprefabs, spawn.transform, false);
-            // make sure array name is the same as you will setup at the top
-            //materialArray[i] = spawnObj.GetComponent<Renderer>().material;
-            for (int i = 0; i <= 4; i = i++  )
-            {
-                materialArray[i] = spawnObj.GetComponent<Renderer>().material;
-            }
-        }
-
-        
-        
             GameObject spawnObj1 = Instantiate(spawncolor1, spawn1.transform, false);
             GameObject spawnObj2 = Instantiate(spawncolor2, spawn2.transform, false);
             GameObject spawnObj3 = Instantiate(spawncolor3, spawn3.transform, false);
@@ -61,6 +47,21 @@ public class spawnManager : MonoBehaviour
             GameObject spawnObj6 = Instantiate(spawncolor6, spawn6.transform, false);
             GameObject spawnObj7 = Instantiate(spawncolor7, spawn7.transform, false);
             GameObject spawnObj8 = Instantiate(spawncolor8, spawn8.transform, false);
+        // recommend using a for loop
+        foreach (GameObject spawn in randomSpawnPoints)
+        {
+            GameObject spawnObj = Instantiate(randprefabs, spawn.transform, false);
+            // make sure array name is the same as you will setup at the top
+            //materialArray[i] = spawnObj.GetComponent<Renderer>().material;
+            for (int i = 4; i <= 4; i = i++  )
+            {
+                materialArray[i] = spawnObj.GetComponent<Renderer>().material;
+            }
+        }
+
+        
+        
+         
 
 
     }
