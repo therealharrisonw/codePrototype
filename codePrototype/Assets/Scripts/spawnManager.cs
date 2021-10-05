@@ -16,6 +16,7 @@ public class spawnManager : MonoBehaviour
     [SerializeField]
     GameObject randprefabs;
     // create array of materials for "recipe"
+    Material[] materialArray;
 
     public GameObject spawncolor1;
     public GameObject spawncolor2;
@@ -44,6 +45,10 @@ public class spawnManager : MonoBehaviour
             GameObject spawnObj = Instantiate(randprefabs, spawn.transform, false);
             // make sure array name is the same as you will setup at the top
             //materialArray[i] = spawnObj.GetComponent<Renderer>().material;
+            for (int i = 0; i <= 4; i = i++  )
+            {
+                materialArray[i] = spawnObj.GetComponent<Renderer>().material;
+            }
         }
 
         
