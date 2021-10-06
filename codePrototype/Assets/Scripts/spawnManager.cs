@@ -4,34 +4,39 @@ using UnityEngine;
 
 public class spawnManager : MonoBehaviour
 {
-    GameObject[] randomSpawnPoints; //sets up the array for my randomized spawn cubes. 
+    GameObject[] SpawnPoints; //sets up the array for my randomized spawn cubes. 
    
     [SerializeField]
     GameObject randprefabs;
     // create array of materials for "recipe"
-    Material[] materialArray;
+    public Material[] materialArray;
 
     
     // Start is called before the first frame update
     void Start()
     {
-       randomSpawnPoints = GameObject.FindGameObjectsWithTag("randomSpawn");
+       SpawnPoints = GameObject.FindGameObjectsWithTag("randomSpawn");
      
 
        
-        // recommend using a for loop
-        foreach (GameObject spawn in randomSpawnPoints)
+        for (int i = 0; i < SpawnPoints.Length; i++)
         {
-            GameObject spawnObj = Instantiate(randprefabs, spawn.transform, false);
+            GameObject spawnObj = Instantiate(randprefabs, SpawnPoints[i].transform, false);
+            materialArray[i] = spawnObj.GetComponent<Renderer>().material;
+        }
+        // recommend using a for loop
+        //foreach (GameObject spawn in randomSpawnPoints)
+        //{
+            
             // make sure array name is the same as you will setup at the top
             //materialArray[i] = spawnObj.GetComponent<Renderer>().material;
-            for (int i = 0; i >= 4; i = i++  )
-            {
-                materialArray[i] = spawnObj.GetComponent<Renderer>().material;
+            //for (int i = 0; i >= 4; i = i++  )
+            //{
+               // materialArray[i] = spawnObj.GetComponent<Renderer>().material;
                 
-            }
-            print(materialArray);
-        }
+           // }
+           // print(materialArray);
+       // }
 
         
         

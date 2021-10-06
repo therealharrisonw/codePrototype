@@ -524,14 +524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randprefabs: {fileID: 5862534391296752060, guid: 7e022e685d1530a4cafdd8fbad4ca90e, type: 3}
-  spawncolor1: {fileID: 1062008244393838968, guid: 74c2bb26740c70e48a107b80a208b94a, type: 3}
-  spawncolor2: {fileID: 572138064740035807, guid: 86106f3d33b45ed4ebceb7b3ad4a42e0, type: 3}
-  spawncolor3: {fileID: 1560450101619754036, guid: b80a10da9cce32a489ddcef6ee5fe07f, type: 3}
-  spawncolor4: {fileID: 7017715454310641876, guid: 66f0bdb6206488b40a71e1e38a2295be, type: 3}
-  spawncolor5: {fileID: 2968242906921031968, guid: 3d6671d566442c04aa6bb00730d2f2ea, type: 3}
-  spawncolor6: {fileID: 592733200134908036, guid: d8ebe80dee7fa8d43bd51f98554e5f46, type: 3}
-  spawncolor7: {fileID: 3316501772864447578, guid: 49d0664de7b85f0409f4b4392f0cc68e, type: 3}
-  spawncolor8: {fileID: 6200024396624074229, guid: 01686e1e9794b2e438d7902b36b920b6, type: 3}
+  materialArray: []
 --- !u!1 &1558709988
 GameObject:
   m_ObjectHideFlags: 0
