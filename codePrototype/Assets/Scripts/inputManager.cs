@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class inputManager : MonoBehaviour
 {
-    Material[] selectColor;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -21,10 +21,7 @@ public class inputManager : MonoBehaviour
     void OnMouseDown()
     {
         // Destroy the gameObject after clicking on it
-        for (int i = 0; i <= 4; i++)
-        {
-            //selectColor[i] = selectPrefabs.GetComponent<Renderer>().material;
-        }
-        
+
+        gameObject.GetComponent<Renderer>();
     }
 }
