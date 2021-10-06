@@ -6,6 +6,7 @@ public class timerScript : MonoBehaviour
 {
     public float timer = 60f;// acts as the timer 
     public bool runTime = false; // is used for deciding the bool for void 
+    public bool clicker = true; // used for 
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class timerScript : MonoBehaviour
             {
                 runTime = false;
                 print("Time's Up shmuck");
+                clicker = false;
             }
         }
     }
