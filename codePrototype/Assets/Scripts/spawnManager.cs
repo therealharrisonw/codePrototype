@@ -28,8 +28,9 @@ public class spawnManager : MonoBehaviour
             for (int i = 0; i >= 4; i = i++  )
             {
                 materialArray[i] = spawnObj.GetComponent<Renderer>().material;
-                print(materialArray);
+                
             }
+            print(materialArray);
         }
 
         
