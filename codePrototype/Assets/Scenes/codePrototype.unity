@@ -306,6 +306,52 @@ Transform:
   m_Father: {fileID: 1524456386}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &982473573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 982473575}
+  - component: {fileID: 982473574}
+  m_Layer: 0
+  m_Name: guessManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &982473574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982473573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd38f45c7beb3ab45933e3721c00b8b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactables: []
+  guesses: []
+  count: 0
+--- !u!4 &982473575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982473573}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.002149, y: -4.9791737, z: 4.629758}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1045170704
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +402,7 @@ GameObject:
   - component: {fileID: 1210600027}
   m_Layer: 0
   m_Name: sp2
-  m_TagString: spawn2
+  m_TagString: selectCubes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -400,7 +446,7 @@ GameObject:
   - component: {fileID: 1252884494}
   m_Layer: 0
   m_Name: sp4
-  m_TagString: spawn4
+  m_TagString: selectCubes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -442,9 +488,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1263125486}
   - component: {fileID: 1263125487}
+  - component: {fileID: 1263125488}
   m_Layer: 0
   m_Name: sp1
-  m_TagString: spawn1
+  m_TagString: selectCubes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -476,6 +523,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectPrefab: {fileID: 1062008244393838968, guid: 74c2bb26740c70e48a107b80a208b94a, type: 3}
+--- !u!114 &1263125488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263125485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a1b6887578fb44090046c9e31739b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1524456385
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,7 +583,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randprefabs: {fileID: 5862534391296752060, guid: 7e022e685d1530a4cafdd8fbad4ca90e, type: 3}
-  materialArray: []
+  materialArray:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1558709988
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,7 +600,7 @@ GameObject:
   - component: {fileID: 1558709990}
   m_Layer: 0
   m_Name: sp5
-  m_TagString: spawn5
+  m_TagString: selectCubes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -581,7 +644,7 @@ GameObject:
   - component: {fileID: 1564921943}
   m_Layer: 0
   m_Name: sp8
-  m_TagString: spawn8
+  m_TagString: selectCubes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -738,7 +801,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603957597}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1a837ee442e9d645aa74626a5e5de4d, type: 3}
   m_Name: 
@@ -798,7 +861,7 @@ GameObject:
   - component: {fileID: 1806575133}
   m_Layer: 0
   m_Name: sp7
-  m_TagString: spawn7
+  m_TagString: selectCubes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -937,7 +1000,7 @@ GameObject:
   - component: {fileID: 1943136701}
   m_Layer: 0
   m_Name: sp3
-  m_TagString: spawn3
+  m_TagString: selectCubes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -981,7 +1044,7 @@ GameObject:
   - component: {fileID: 1991159632}
   m_Layer: 0
   m_Name: sp6
-  m_TagString: spawn6
+  m_TagString: selectCubes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
