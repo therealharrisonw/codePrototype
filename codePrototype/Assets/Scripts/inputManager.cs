@@ -23,9 +23,11 @@ public class inputManager : MonoBehaviour
     void OnMouseDown()
     {
         // Destroy the gameObject after clicking on it
-        
+        while(ts.clicker == true) { 
         gameObject.GetComponent<Renderer>();
         gs.guesses[gs.count] = gameObject.GetComponent<Renderer>().material;
         gs.count++;
+            gs.recipeChecker();
+        }
     }
 }

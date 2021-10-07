@@ -7,9 +7,9 @@ public class spawnManager : MonoBehaviour
     GameObject[] SpawnPoints; //sets up the array for my randomized spawn cubes. 
    
     [SerializeField]
-    GameObject randprefabs;
+    GameObject randprefabs;// sets up 
     // create array of materials for "recipe"
-    public Material[] materialArray;
+    public Material[] materialArray; //arary for my random colors to be checked against player input.
 
     
     // Start is called before the first frame update

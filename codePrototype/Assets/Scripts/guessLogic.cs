@@ -7,14 +7,16 @@ public class guessLogic : MonoBehaviour
     spawnManager sm;
     public GameObject[] interactables;
     public Material[] guesses;
-    public int count = 0; //used to 
+    public int count = 0; //used to help keep the count 
     //int score = 0;
 
     
     // Start is called before the first frame update
     void Start()
     {
+       
         sm = GameObject.Find("spawnManager").GetComponent<spawnManager>();//links my random array in spawnManager into this script for ease of refrencing it later
+        
     }
 
     // Update is called once per frame
@@ -27,22 +29,24 @@ public class guessLogic : MonoBehaviour
     {
         if (count == guesses.Length - 1)
         {
+            
             for (int i = 0; i >= 4; i++)
             {
-                //if (guesses[i] == materialArray[i])
-                //{
+                if (guesses[i] == sm.materialArray[i])
+                {
                     //score++;
-                    //print("score" + score);
+                    print("score");
                     //reset the random pattern,count integer, guesses array
-               // }
-                //else
-                //{
-                    //print("incorect");
+                }
+                else
+                {
+                    print("incorect");
                     //either break or repeat;
                     //reset the random pattern;count integer, guesses array
-                //}
+                }
             }
             }
         }
     }
-}
+
+

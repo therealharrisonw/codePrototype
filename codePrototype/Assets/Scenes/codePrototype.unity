@@ -336,7 +336,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactables: []
-  guesses: []
+  guesses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   count: 0
 --- !u!4 &982473575
 Transform:
@@ -488,7 +492,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1263125486}
   - component: {fileID: 1263125487}
-  - component: {fileID: 1263125488}
   m_Layer: 0
   m_Name: sp1
   m_TagString: selectCubes
@@ -523,18 +526,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectPrefab: {fileID: 1062008244393838968, guid: 74c2bb26740c70e48a107b80a208b94a, type: 3}
---- !u!114 &1263125488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1263125485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01a1b6887578fb44090046c9e31739b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1524456385
 GameObject:
   m_ObjectHideFlags: 0
