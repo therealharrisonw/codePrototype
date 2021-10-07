@@ -5,7 +5,6 @@ using UnityEngine;
 public class guessLogic : MonoBehaviour
 {
     spawnManager sm;
-    public GameObject[] interactables;
     public Material[] guesses;
     public int count = 0; //used to help keep the count 
     //int score = 0;
@@ -27,13 +26,14 @@ public class guessLogic : MonoBehaviour
 
     public void recipeChecker()
     {
-        if (count == guesses.Length - 1)
+        if (count == guesses.Length)
         {
             
-            for (int i = 0; i >= 4; i++)
+           for (int i = 0; i >= 5; i++)
             {
                 if (guesses[i] == sm.materialArray[i])
-                {
+                {Debug.Log("Analyze");
+                    
                     //score++;
                     print("score");
                     //reset the random pattern,count integer, guesses array

@@ -10,8 +10,8 @@ public class inputManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gs = GameObject.Find("GuessManager").GetComponent<guessLogic>();
-        ts = GameObject.Find("Main Camera").GetComponent<timerScript>();
+        gs = GameObject.Find("guessManager").GetComponent<guessLogic>(); //pulling my script over to set up my guessLogic, guesses and count
+        ts = GameObject.Find("Main Camera").GetComponent<timerScript>(); //
     }
 
     // Update is called once per frame
@@ -22,12 +22,12 @@ public class inputManager : MonoBehaviour
 
     void OnMouseDown()
     {
-        // Destroy the gameObject after clicking on it
-        while(ts.clicker == true) { 
-        gameObject.GetComponent<Renderer>();
+
+
+        
         gs.guesses[gs.count] = gameObject.GetComponent<Renderer>().material;
         gs.count++;
         gs.recipeChecker();
-        }
+        
     }
 }

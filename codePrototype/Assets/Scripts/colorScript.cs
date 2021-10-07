@@ -8,7 +8,7 @@ public class colorScript : MonoBehaviour
     Renderer rend;
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         rend = GetComponent<Renderer>();
         int rand = Random.Range(0, materials.Length);

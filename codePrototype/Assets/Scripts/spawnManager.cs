@@ -22,7 +22,7 @@ public class spawnManager : MonoBehaviour
         for (int i = 0; i < SpawnPoints.Length; i++)
         {
             GameObject spawnObj = Instantiate(randprefabs, SpawnPoints[i].transform, false);
-            materialArray[i] = spawnObj.GetComponent<Renderer>().material;
+            materialArray[i] =  spawnObj.GetComponent<Renderer>().material;
         }
         // recommend using a for loop
         //foreach (GameObject spawn in randomSpawnPoints)
