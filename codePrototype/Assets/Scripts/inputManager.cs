@@ -27,7 +27,7 @@ public class inputManager : MonoBehaviour
         gameObject.GetComponent<Renderer>();
         gs.guesses[gs.count] = gameObject.GetComponent<Renderer>().material;
         gs.count++;
-            gs.recipeChecker();
+        gs.recipeChecker();
         }
     }
 }
