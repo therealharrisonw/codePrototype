@@ -6,7 +6,7 @@ public class timerScript : MonoBehaviour
 {
     public float timer = 60f;// acts as the timer 
     public bool runTime = false; // is used for deciding the bool for void 
-    public bool clicker = true; // used for 
+    public bool clicker = true; // used for turning on and off the ability to click 
     // Start is called before the first frame update
     void Start()
     {
