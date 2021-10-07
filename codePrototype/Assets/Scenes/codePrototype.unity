@@ -335,11 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd38f45c7beb3ab45933e3721c00b8b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guesses:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  guesses: []
   count: 0
 --- !u!4 &982473575
 Transform:
