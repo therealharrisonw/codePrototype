@@ -26,10 +26,10 @@ public class guessLogic : MonoBehaviour
 
     public void recipeChecker()
     {
-        if (count == guesses.Length)
+        if (count == guesses.Length-1)
         {
 
-            for(int i = 0; i == 4; i++)
+            for(int i = 0; i >= guesses.Length; i++)
             {
                 Debug.Log("For Test");
                 if (guesses[i] == sm.materialArray[i])
