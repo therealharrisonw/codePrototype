@@ -7,7 +7,7 @@ public class guessLogic : MonoBehaviour
     spawnManager sm;
     public Material[] guesses;
     public int count = 0; //used to help keep the count 
-                          //int score = 0;
+               int score = 0;
 
 
     // Start is called before the first frame update
@@ -26,19 +26,32 @@ public class guessLogic : MonoBehaviour
 
     public void recipeChecker()
     {
-        if (count == guesses.Length-1)
+        if (count == guesses.Length)
         {
-
-            for(int i = 0; i >= guesses.Length; i++)
+            Debug.Log("test1");
+            for(int i = 0; i < guesses.Length; i++)
             {
                 Debug.Log("For Test");
-                if (guesses[i] == sm.materialArray[i])
+                if (guesses[i].name == sm.materialArray[i].name)
                 {
                     Debug.Log("Analyze");
 
-                    //score++;
-                    print("score");
+                    if(guesses[3].name == sm.materialArray[3].name)
+                    {
+                        score++;
+                         print("score" + score);
+                        sm.randSpawn();
+                       
+                        for (int a = 0; a < guesses.Length; i++)
+                        {
+                            count = 0;
+                            guesses[a] = null;
+                        }
+                        
+                        
                     //reset the random pattern,count integer, guesses array
+                    }
+                    
                 }
                 else
                 {

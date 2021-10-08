@@ -15,28 +15,8 @@ public class spawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       SpawnPoints = GameObject.FindGameObjectsWithTag("randomSpawn");
-     
-
-       
-        for (int i = 0; i < SpawnPoints.Length; i++)
-        {
-            GameObject spawnObj = Instantiate(randprefabs, SpawnPoints[i].transform, false);
-            materialArray[i] =  spawnObj.GetComponent<Renderer>().material;
-        }
-        // recommend using a for loop
-        //foreach (GameObject spawn in randomSpawnPoints)
-        //{
-            
-            // make sure array name is the same as you will setup at the top
-            //materialArray[i] = spawnObj.GetComponent<Renderer>().material;
-            //for (int i = 0; i >= 4; i = i++  )
-            //{
-               // materialArray[i] = spawnObj.GetComponent<Renderer>().material;
-                
-           // }
-           // print(materialArray);
-       // }
+        randSpawn();
+   
 
         
         
@@ -46,6 +26,19 @@ public class spawnManager : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    public void randSpawn()
+    {
+        SpawnPoints = GameObject.FindGameObjectsWithTag("randomSpawn");
+
+
+
+        for (int i = 0; i < SpawnPoints.Length; i++)
+        {
+            GameObject spawnObj = Instantiate(randprefabs, SpawnPoints[i].transform, false);
+            materialArray[i] = spawnObj.GetComponent<Renderer>().material;
+        }
+    }
     void Update()
     {
         

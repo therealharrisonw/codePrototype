@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class colorScript : MonoBehaviour
 {
-    public Material[] materials;
+    public Material[] materials; 
     Renderer rend;
     
     // Start is called before the first frame update
