@@ -22,12 +22,14 @@ public class inputManager : MonoBehaviour
 
     void OnMouseDown()
     {
+        while (ts.clicker)
+        {
 
 
-        
-        gs.guesses[gs.count] = gameObject.GetComponent<Renderer>().material;
-        gs.count++;
-        gs.recipeChecker();
+            gs.guesses[gs.count] = gameObject.GetComponent<Renderer>().material;
+            gs.count++;
+            gs.recipeChecker();
+        }
         
     }
 }
