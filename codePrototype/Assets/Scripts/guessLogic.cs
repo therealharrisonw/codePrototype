@@ -7,7 +7,7 @@ public class guessLogic : MonoBehaviour
     spawnManager sm;
     public Material[] guesses;
     public int count = 0; //used to help keep the count 
-               int score = 0;
+     int score = 0;
 
 
     // Start is called before the first frame update
@@ -28,7 +28,7 @@ public class guessLogic : MonoBehaviour
     {
         if (count == guesses.Length)
         {
-            Debug.Log("test1");
+            
             for(int i = 0; i < guesses.Length; i++)
             {
                 Debug.Log("For Test");
@@ -38,28 +38,47 @@ public class guessLogic : MonoBehaviour
 
                     if(guesses[3].name == sm.materialArray[3].name)
                     {
+                        Debug.Log("This should print only once");
                         score++;
-                         print("score" + score);
-                        sm.randSpawn();
+                        print("score" + score);
                        
-                        for (int a = 0; a < guesses.Length; i++)
-                        {
-                            count = 0;
-                            guesses[a] = null;
-                        }
+                        break;
+                       
+                        //for (int a = 0; a < guesses.Length; a++)
+                        //{
+                            //count = 0;
+                           // guesses[a] = null;
+                        //}
                         
                         
-                    //reset the random pattern,count integer, guesses array
                     }
                     
                 }
                 else
                 {
                     print("incorect");
+                    break;
                     //either break or repeat;
                     //reset the random pattern;count integer, guesses array
                 }
-            }
+               
+            } Round2();
+
+             void Round2()
+            {
+
+                sm.randprefabs.SetActive(false);
+                
+
+                sm.randSpawn();
+                   count = 0;
+                
+                for (int a = 0; a < guesses.Length; a++)
+                {
+                    guesses[a] = null;
+                    
+                }
+            }   
 
         }
     }
