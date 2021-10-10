@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class guessLogic : MonoBehaviour
 {
-    spawnManager sm;
-    public Material[] guesses;
-    public int count = 0; //used to help keep the count 
-     int score = 0;
+    spawnManager sm; //used to help draw in information from my spawnManager script
+    public Material[] guesses; //the array used to hold guesses from the player input
+    public int count = 0; //used to increment count and to set up for checking later
+     int score = 0; //the score variable 
 
 
     // Start is called before the first frame update
@@ -18,70 +18,53 @@ public class guessLogic : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void recipeChecker() //method for checking answers against guesses. 
     {
-
-    }
-
-    public void recipeChecker()
-    {
-        if (count == guesses.Length)
+        if (count == guesses.Length) //checks that count equals the length of my guesses array
         {
             
-            for(int i = 0; i < guesses.Length; i++)
+            for(int i = 0; i < guesses.Length; i++) //sets up the ability to check the arrays against each other in one loop
             {
-                Debug.Log("For Test");
-                if (guesses[i].name == sm.materialArray[i].name)
+                
+                if (guesses[i].name == sm.materialArray[i].name) //checks the guess and answer array against each other in each slot
                 {
-                    Debug.Log("Analyze");
+                    
 
-                    if(guesses[3].name == sm.materialArray[3].name)
-                    {
-                        Debug.Log("This should print only once");
-                        score++;
-                        print("score" + score);
-                       
-                        break;
-                       
-                        //for (int a = 0; a < guesses.Length; a++)
-                        //{
-                            //count = 0;
-                           // guesses[a] = null;
-                        //}
-                        
-                        
+                    if(guesses[3].name == sm.materialArray[3].name) //tells the for loop to check the last spot on each array before running this. 
+                    { 
+                        score++; //increments the score variable by one 
+                        print("score" + score); //let's player know that the score increased. may be lost in the console due to timer.
+                        break; //tells the for loop to end and move onto the next thing
+  
                     }
                     
                 }
                 else
                 {
-                    print("incorect");
-                    break;
-                    //either break or repeat;
-                    //reset the random pattern;count integer, guesses array
+                    print("incorect"); //lets player know that they were incorrect. Might be lost due to the timer. 
+                    break; //tells the for loop to end and move on to the next thing. 
+                    
                 }
                
-            } Round2();
+            } Round2();// calls the round two method to set up a new round
 
-             void Round2()
+             void Round2() //used for setting up the next round of gameplay. 
             {
+                Destroy(sm.materialArray[0]); //unfortunatelty this is the hardcoded way to clear out the recipe. But i could not get a soft coded way to work.
+                Destroy(sm.materialArray[1]);
+                Destroy(sm.materialArray[2]);
+                Destroy(sm.materialArray[3]);
+                sm.randSpawn();// my method for spawning in cubes 
 
-                
-                
-
-                
-                   
-                
+                count = 0; //resests the guess counter for the new round
                 for (int a = 0; a < guesses.Length; a++)
                 {
-                    if(guesses[a].name == sm.materialArray[0].name)
-                    {
-                        Destroy(sm.materialArray[0]);
-                        sm.randSpawn();
-                        guesses[a] = null;
-                        count = 0;
-                    }
+                    guesses[a] = null;//clears out the guesses array for the new round
+                    
+                    
+                       
+                        
+                    
                    
                     
                 }

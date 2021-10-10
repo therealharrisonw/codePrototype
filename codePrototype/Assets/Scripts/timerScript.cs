@@ -10,24 +10,23 @@ public class timerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        runTime = true;
+        runTime = true; //sets runTime to true so that the timer runs.
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (runTime == true)
+        if (runTime == true) //as long as runTime is true it will check my time
         {
             if (timer > 0f)// if timer is greater than 0, print text to console displaying time. 
             {
-                timer -= Time.deltaTime;
-                print("Time:" + timer);
+                timer -= Time.deltaTime; //tells timer to subtract its predetermined time by deltaTime.
+                print("Time:" + timer); //prints the time to the console.
             }
             else
             {
-                runTime = false;
-                print("Time's Up shmuck");
-                clicker = false;
+                print("Time's Up"); //tells the player they are out of time
+                clicker = false; //turns off the ability to click
             }
         }
     }

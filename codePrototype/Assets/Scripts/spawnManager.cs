@@ -16,14 +16,8 @@ public class spawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        randSpawn();
-   
 
-        
-        
-         
-
+        randSpawn(); //calls the custome method i created for spawning my random cubes
 
     }
 
@@ -31,19 +25,13 @@ public class spawnManager : MonoBehaviour
 
     public void randSpawn()
     {    
-        SpawnPoints = GameObject.FindGameObjectsWithTag("randomSpawn");
-        
-        randprefabs.SetActive(true);
+        SpawnPoints = GameObject.FindGameObjectsWithTag("randomSpawn"); //tells the game to populate hte spawpoints array with any object that has the tag randomSpawn
 
-
-        for (int i = 0; i < SpawnPoints.Length; i++)
+        for (int i = 0; i < SpawnPoints.Length; i++)//sets up a for loop to spawn in the random objects
         {
-             GameObject spawnObj = Instantiate(randprefabs, SpawnPoints[i].transform, false);
-            materialArray[i] = spawnObj.GetComponent<Renderer>().material;
+             GameObject spawnObj = Instantiate(randprefabs, SpawnPoints[i].transform, false); //instantiates my random cube spawner
+            materialArray[i] = spawnObj.GetComponent<Renderer>().material; //sets up my materialArray to pull the material information from the objects
         }
     }
-    void Update()
-    {
-        
-    }
+   
 }
