@@ -67,15 +67,22 @@ public class guessLogic : MonoBehaviour
              void Round2()
             {
 
-                sm.randprefabs.SetActive(false);
+                
                 
 
-                sm.randSpawn();
-                   count = 0;
+                
+                   
                 
                 for (int a = 0; a < guesses.Length; a++)
                 {
-                    guesses[a] = null;
+                    if(guesses[a].name == sm.materialArray[0].name)
+                    {
+                        Destroy(sm.materialArray[0]);
+                        sm.randSpawn();
+                        guesses[a] = null;
+                        count = 0;
+                    }
+                   
                     
                 }
             }   

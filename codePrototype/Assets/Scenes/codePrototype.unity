@@ -572,6 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b56c93201d5e174ab37c59e2f7b3626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnPoints: []
   randprefabs: {fileID: 5862534391296752060, guid: 7e022e685d1530a4cafdd8fbad4ca90e, type: 3}
   materialArray:
   - {fileID: 0}
@@ -791,7 +792,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603957597}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1a837ee442e9d645aa74626a5e5de4d, type: 3}
   m_Name: 
