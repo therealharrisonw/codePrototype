@@ -50,6 +50,7 @@ public class guessLogic : MonoBehaviour
 
              void Round2() //used for setting up the next round of gameplay. 
             {
+                print("Your current score is" + score);
                 Destroy(sm.materialArray[0]); //unfortunatelty this is the hardcoded way to clear out the recipe. But i could not get a soft coded way to work.
                 Destroy(sm.materialArray[1]);
                 Destroy(sm.materialArray[2]);

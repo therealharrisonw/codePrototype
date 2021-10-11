@@ -7,10 +7,12 @@ public class timerScript : MonoBehaviour
     public float timer = 60f;// acts as the timer 
     public bool runTime = false; // is used for deciding the bool for void 
     public bool clicker = true; // used for turning on and off the ability to click 
+    guessLogic gl;
     // Start is called before the first frame update
     void Start()
     {
         runTime = true; //sets runTime to true so that the timer runs.
+        gl = GameObject.Find("guessManager").GetComponent<guessLogic>();
     }
 
     // Update is called once per frame
@@ -25,7 +27,7 @@ public class timerScript : MonoBehaviour
             }
             else
             {
-                print("Time's Up"); //tells the player they are out of time
+                print("Time's Up!" ); //tells the player they are out of time
                 clicker = false; //turns off the ability to click
             }
         }
